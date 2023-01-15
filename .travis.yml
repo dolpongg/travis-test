@@ -16,9 +16,6 @@ before_install:
 script:
   - docker run -e CI=true docker-react npm run test -- --coverage
 
-after_success : 
-  - echo "test success"
-
 deploy :
   provider : elasticbeanstalk
   region : : "us-east-1"
